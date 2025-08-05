@@ -1,0 +1,55 @@
+.createFirstTaskContainer{
+    background-color: #EFCFB4;
+    border-radius: 10px;
+    height: 25vh;
+    margin-top: 2em;
+}
+
+.createFirstTaskContainer input{
+    background-color: #EFCFB4;
+    border-width: 0px;
+    color: #4E2A09;
+    width: 70%;
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-size: 1rem;
+    border-color: none;
+    height: 2rem;
+}
+
+.firstTaskButton{
+    display: flex;
+    flex-direction: row;
+    height: 8vh;
+    padding-bottom: 2rem;
+    float: right;
+}
+
+.cancelButton{
+    background-color: #b89272;
+    color: #fff2e8e2;
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    margin-right: 1em;
+}
+
+.cancelButton:hover{
+    background-color: #a9815f;
+}
+
+.createFirstTaskBtn{
+    background-color: #926c4d;
+    color: #FFF2E8;
+    font-size: 0.85rem;
+    letter-spacing: 0.1rem;
+    margin-right: 2.5em;
+}
+
+.createFirstTaskBtn:hover{
+    background-color: #775336;
+}
+
+::placeholder {
+    opacity: 50%;
+    color: #4E2A09; /* Example: a light gray color */
+}

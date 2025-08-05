@@ -1,0 +1,71 @@
+.timerContainer{
+    width: 100%;
+    background-color: #EFCFB4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+}
+
+.timerOptions button{
+    background-color: #FFE7D3;
+    color: #4E2A09;
+    letter-spacing: 0.2rem;
+    height: 3rem;
+    font-size: 0.9rem;
+}
+
+.timerOptions button:hover{
+    border-color: #CDA07B;
+    border-width: 0.1rem;
+}
+
+.timerOptions{
+    width: 70%;
+    margin-left: 15%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 2.5rem;
+}
+
+.timer h1{
+    font-size: 5.5rem;
+    font-weight: 500;
+    letter-spacing: 1rem;
+}
+
+.timer{
+    margin-top: -1em;
+    margin-bottom: -1em;
+}
+
+.startButton button{
+    background-color: #CDA07B;
+    font-size: 1.6rem;
+    width: 70%;
+    margin-bottom: 3rem;
+    letter-spacing: 0.5rem;
+    color: #FFF2E8;
+    filter: drop-shadow(0px 10px 0px #C2926B);
+}
+
+.startButton button:hover{
+    background-color: #d1a581;
+    border-width: 0.15rem;
+    border-color: #967251;
+}
+
+@media only screen and (max-width: 900px) {
+    .timerOptions{
+        display: flex;
+        flex-direction: column;
+        height: 9rem;
+        justify-content: space-between;
+    }
+
+    .timerOptions button{
+        width: 50vw;
+        height: 2.5rem;
+    }
+}

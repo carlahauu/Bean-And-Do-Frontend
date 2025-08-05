@@ -1,0 +1,138 @@
+.left-line{
+    width: 35%;
+    height: 2px;
+    background-color: #4E2A09;
+}
+
+.right-line{
+    width: 35%;
+    height: 2px;
+    background-color: #4E2A09;
+}
+
+.heading{
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    letter-spacing: 0.3rem;
+}
+
+.heading h2{
+    width: 30%;
+    font-weight: 500;
+}
+
+.todoContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+}
+
+.todoItems p{
+    font-size: 1.2rem;
+}
+
+.noTasks button{
+    background-color: #CDA07B;
+    font-size: 1.2rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    letter-spacing: 0.5rem;
+    color: #FFF2E8;
+    margin-top: 1em;
+}
+
+.addTaskBtn{
+    background-color: #EFCFB4;
+    font-size: 1.2rem;
+    width: 100%;
+    color: #C5A184;
+    letter-spacing: 0.5rem;
+    margin-top: 1em;
+}
+
+.noTasks button:hover{
+    background-color: #d1a581;
+    border-width: 0.15rem;
+    border-color: #967251;
+}
+
+.todoList{
+    display: flex;
+    flex-direction: column;
+}
+
+.todoItem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.todoItem{
+    justify-content: space-between;
+}
+
+.todoItem p{
+    letter-spacing: 0.1rem;
+    text-align: center;
+}
+
+.editButton button{
+    background-color: #FFF2E8;
+    border-color: #91633D;
+    border-radius: 10px;
+    border-width: 0.15rem;
+    display: flex;
+    flex-direction: row;
+    padding-right: 0.5rem;
+    padding-left: 0.8rem;
+}
+
+.editButton div{
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: #91633D;
+    margin-right: 0.2rem;
+    border-radius: 10px;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.completedButton{
+    background-color: #EFCFB4;
+    filter: drop-shadow(0px 5px 0px #E5BE9F);
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    border-radius: 10px;
+    padding-top: 0.4em;
+    padding-bottom: 0.4rem;
+    color: #4e2a092b;
+    float: right;
+}
+
+.completedButton:active{
+    color: #4e2a09;
+    background-color: #e7bc98;
+    filter: drop-shadow(0px 5px 0px #d8a983);
+}
+
+.todoItem p{
+    margin-left: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .heading h2{
+        width: 40%;
+    }
+    .left-line{
+        width: 30%;
+        height: 2px;
+        background-color: #4E2A09;
+    }
+    
+    .right-line{
+        width: 30%;
+        height: 2px;
+        background-color: #4E2A09;
+    }
+}

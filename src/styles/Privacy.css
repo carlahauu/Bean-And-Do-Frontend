@@ -1,0 +1,20 @@
+.privacyContainer{
+    text-align: left;
+    letter-spacing: 0.1rem;
+    margin-top: 2em;
+}
+
+.bold{
+    font-weight: 800;
+}
+
+.privacyContainer a{
+    color: #4E2A09;
+}
+
+@media only screen and (max-width: 1300px) {
+    .privacyContainer{
+        width: 70vw;
+        margin-left: -12.5vw;
+    }
+}
