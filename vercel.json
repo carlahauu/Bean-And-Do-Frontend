@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https:/beananddo.carlahau.com/api/:path*"
+      "destination": "https://bean-and-do-backend.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
