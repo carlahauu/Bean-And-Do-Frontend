@@ -75,7 +75,17 @@
     .right{
         margin-top: -65%;
     }
-    /* .navBarContainer{
-        display: none;
-    } */
+}
+
+@media only screen and (min-width: 200px) and (max-width: 507px){
+    .right{
+        margin-top: -100%;
+        margin-bottom: 3em;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 450px){
+    .right{
+        margin-top: -110%;
+    }
 }
