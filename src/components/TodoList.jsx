@@ -5,6 +5,7 @@ import axios from 'axios'
 import { FaCheck } from "react-icons/fa";
 import CreateTask from './CreateTask';
 import UpdateTask from './UpdateTask';
+import {SyncLoader} from 'react-spinners'
 
 function TodoList() {
     const [firstTaskCreated, setfirstTaskCreated] = useState(false);
@@ -14,6 +15,7 @@ function TodoList() {
     const [tasks, setTasks] = useState([]);
     const [taskTitle, setTaskTitle] = useState(""); 
     const [taskID, setTaskID] = useState(""); 
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         if (localStorage.getItem("taskListId")) {
@@ -27,9 +29,11 @@ function TodoList() {
     }, [firstTaskCreated]);
 
     const fetchTasks = () => {
+        setLoading(true)
         axios.get(`/api/task-lists/${localStorage.getItem("taskListId")}`)
             .then(res => {
                 setTasks(Array.isArray(res.data) ? res.data : res.data.tasks || []);
+                setLoading(false); 
             })
             .catch(err => console.error(err));
     };
@@ -100,39 +104,50 @@ function TodoList() {
             <h2>to-do list</h2>
             <div className="right-line"></div>
         </div>
-        <div className="todoItems">
-            <div className="todoList">
-                    {tasks.map((task, i) => (
-                    <div className="todoItem">
-                        <div className="editButton" onClick={() => handleUpdateTaskForm(task.id)}>
-                            <button>
-                                <div></div>
-                                <div></div>
-                                <div></div>
+        {loading ? (
+            <div className="loader">
+                <SyncLoader size="10" color='#4E2A09'/>
+                <p>
+                    ... loading ...
+                    <br></br>
+                    could take up to 50 secs
+                </p>
+            </div>
+        ) : (
+            <div className="todoItems">
+                <div className="todoList">
+                        {tasks.map((task, i) => (
+                        <div className="todoItem">
+                            <div className="editButton" onClick={() => handleUpdateTaskForm(task.id)}>
+                                <button>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </button>
+                            </div>
+                            <p key={i}>{task.title}</p>
+                            <button onClick={() => handleCompleted(task.id)} className="completedButton">
+                                <FaCheck/>
                             </button>
                         </div>
-                        <p key={i}>{task.title}</p>
-                        <button onClick={() => handleCompleted(task.id)} className="completedButton">
-                            <FaCheck/>
-                        </button>
-                    </div>
-                    ))}
-            </div>
-            {!firstTaskCreated ? (
-                <div className="noTasks">
-                    <p>Start fresh — click the button below to brew your first task and get productive!</p>
-                    <button onClick={createFirstTaskForm}>create task</button>
+                        ))}
                 </div>
-            ) : createFirstTask ? (
-                <CreateFirstTask handleCancel={handleFirstTaskCancel} onTaskAdded={handleTaskAdded}/>
-            ) : updateTask ? (
-                <UpdateTask taskId={taskID} taskTitle={taskTitle} handleCancel={handleUpdateTaskCancel} onTaskUpdated={handleTaskUpdated}/>
-            ) : !addTask ? (
-                <button className='addTaskBtn' onClick={createTask}>add task!</button>
-            ) : (
-                <CreateTask handleCancel={handleTaskCancel} onTaskAdded={handleTaskAdded}/>
-            )}
-        </div>
+                {!firstTaskCreated ? (
+                    <div className="noTasks">
+                        <p>Start fresh — click the button below to brew your first task and get productive!</p>
+                        <button onClick={createFirstTaskForm}>create task</button>
+                    </div>
+                ) : createFirstTask ? (
+                    <CreateFirstTask handleCancel={handleFirstTaskCancel} onTaskAdded={handleTaskAdded}/>
+                ) : updateTask ? (
+                    <UpdateTask taskId={taskID} taskTitle={taskTitle} handleCancel={handleUpdateTaskCancel} onTaskUpdated={handleTaskUpdated}/>
+                ) : !addTask ? (
+                    <button className='addTaskBtn' onClick={createTask}>add task!</button>
+                ) : (
+                    <CreateTask handleCancel={handleTaskCancel} onTaskAdded={handleTaskAdded}/>
+                )}
+            </div>
+        )}
     </div>
   )
 }
