@@ -5,7 +5,7 @@ import axios from 'axios'
 import { FaCheck } from "react-icons/fa";
 import CreateTask from './CreateTask';
 import UpdateTask from './UpdateTask';
-import {SyncLoader} from 'react-spinners'
+import {BarLoader} from 'react-spinners'
 
 function TodoList() {
     const [firstTaskCreated, setfirstTaskCreated] = useState(false);
@@ -106,7 +106,7 @@ function TodoList() {
         </div>
         {loading ? (
             <div className="loader">
-                <SyncLoader size="10" color='#4E2A09'/>
+                <BarLoader size="10" color='#4E2A09'/>
                 <p>
                     ... loading ...
                     <br></br>
