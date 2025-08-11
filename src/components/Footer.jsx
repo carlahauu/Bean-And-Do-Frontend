@@ -11,7 +11,7 @@ function Footer() {
             <a href='/contact'>contact</a>
         </div>
         <div className="madeWithLove">
-            <h1>made with love by <span>carla hau</span></h1>
+            <h1>made with love by <a href="http://linkedin.com/in/carla-hau/">carla hau</a></h1>
         </div>
         <div className="copyright">
             <p>© 2025 Bean & Do by Carla Hau. All Rights Reserved.</p>

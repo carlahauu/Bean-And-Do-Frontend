@@ -18,6 +18,12 @@ body {
   display: flex;
   min-width: 320px;
   min-height: 100vh;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to right, #4e2a0910 1px, transparent 1px),
+      linear-gradient(to bottom, #4e2a090c 1px, transparent 1px);
+  background-size: 23px 23px;
 }
 
 h1 {
