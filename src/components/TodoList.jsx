@@ -104,7 +104,7 @@ function TodoList() {
             <h2>to-do list</h2>
             <div className="right-line"></div>
         </div>
-        {loading ? (
+        {loading & createFirstTask & !firstTaskCreated ? (
             <div className="loader">
                 <BarLoader size="10" color='#4E2A09'/>
                 <p>
