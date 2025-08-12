@@ -25,8 +25,14 @@ function TodoList() {
       
 
     useEffect(() => {
-        fetchTasks()
+        const taskListId = localStorage.getItem("taskListId");
+        if (taskListId) {
+            fetchTasks(taskListId);
+        } else {
+            setLoading(false); 
+        }
     }, [firstTaskCreated]);
+    
 
     const fetchTasks = () => {
         setLoading(true)
@@ -104,7 +110,7 @@ function TodoList() {
             <h2>to-do list</h2>
             <div className="right-line"></div>
         </div>
-        {loading & createFirstTask & !firstTaskCreated ? (
+        {loading ? (
             <div className="loader">
                 <BarLoader size="10" color='#4E2A09'/>
                 <p>
