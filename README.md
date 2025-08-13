@@ -9,7 +9,7 @@ This is the **frontend** for the Bean & Do productivity app, built with **React.
 - View and manage task lists
 - Create, update, and delete tasks
 - Designed according to a Figma mockup for clean, intuitive UX
-- Uses **Axios** to communicate with the backend API
+- Communicates with the backend API (Spring Boot App)
 - Standard Pomodoro timer (25 minute work, 5/10 minute break)
 
 ## Getting Started
