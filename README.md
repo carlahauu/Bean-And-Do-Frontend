@@ -2,7 +2,7 @@
 
 This is the **frontend** for the Bean & Do productivity app, built with **React.js**. It interacts with a separate Spring Boot backend, which handles data storage and API operations.
 
-> Note: This repository contains only the frontend. The backend is hosted separately in another repository.
+> Note: This repository contains only the frontend. The backend is hosted separately in [another repository.](https://github.com/carlahauu/Bean-And-Do-Frontend)
 
 ## Features
 
