@@ -9,11 +9,7 @@ function UpdateTask(props) {
         try {
             const updatedTask = { 
                 id: props.taskId, 
-                title: updatedTitle, 
-                description: "", 
-                dueDate: "", 
-                priority: "MEDIUM", 
-                status: "OPEN"
+                title: updatedTitle
             };
 
             axios.put(`/api/task-lists/${localStorage.getItem('taskListId')}/tasks/${props.taskId}/update`, updatedTask )

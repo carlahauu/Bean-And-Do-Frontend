@@ -11,8 +11,6 @@ function CreateFirstTask(props) {
                 title
             };
 
-            console.log(title)
-
             axios.post('/api/task-lists', newTaskList)
                 .then(response => {
                     const taskListId = response.data.id;

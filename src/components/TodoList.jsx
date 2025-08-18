@@ -15,7 +15,7 @@ function TodoList() {
     const [tasks, setTasks] = useState([]);
     const [taskTitle, setTaskTitle] = useState(""); 
     const [taskID, setTaskID] = useState(""); 
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         if (localStorage.getItem("taskListId")) {
@@ -31,7 +31,7 @@ function TodoList() {
         } else {
             setLoading(false); 
         }
-    }, [firstTaskCreated]);
+    }, [firstTaskCreated, createFirstTask]);
     
 
     const fetchTasks = () => {
