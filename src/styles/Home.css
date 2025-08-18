@@ -8,3 +8,10 @@
         margin-left: -12vw;
     }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 507px){
+    .homeContainer{
+        width: 80vw;
+        margin-left: -16.5vw;
+    }
+}

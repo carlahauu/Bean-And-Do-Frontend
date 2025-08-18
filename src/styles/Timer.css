@@ -72,8 +72,12 @@
 
 @media only screen and (min-width: 0px) and (max-width: 507px){
     .timer h1{
-        font-size: 4rem;
+        font-size: 3.5rem;
         font-weight: 500;
         letter-spacing: 1rem;
+    }
+    .timerOptions button{
+        width: 55vw;
+        height: 2.5rem;
     }
 }
